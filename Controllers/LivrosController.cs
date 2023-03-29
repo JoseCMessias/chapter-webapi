@@ -63,6 +63,5 @@ namespace Chapter.WebApi.Controllers
             _livroRepository.Deletar(id);
             return StatusCode(204);
         }
-
     }
 }
