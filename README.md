@@ -1,2 +1,3 @@
-# chapter-webapi
-Gerenciador de livros 
+# Projeto API Chapter
+### Atividade SENAI
+- Gerenciador de livros 
