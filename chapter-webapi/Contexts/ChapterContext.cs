@@ -1,7 +1,6 @@
 using Chapter.WebApi.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Data.SqlClient;
-using Microsoft.Data.SqlClient;
+
 namespace Chapter.WebApi.Contexts
 {
     public class ChapterContext : DbContext
