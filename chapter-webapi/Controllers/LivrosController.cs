@@ -24,7 +24,6 @@ namespace Chapter.WebApi.Controllers
             return Ok(_livroRepository.Listar());
         }
 
-        // get /api/livros/{id}
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)
         {
@@ -36,18 +35,13 @@ namespace Chapter.WebApi.Controllers
             return Ok(livro);
         }
 
-        // put /api/livros/{id}
-        // recebe a informação do livro
-        // atualiza o corpo da requisição
-        [HttpPut("{id}")] // o id passado no put/api/livros/1
+        [HttpPut("{id}")] 
         public IActionResult Atualizar(int id, Livro livro)
         {
             _livroRepository.Atualizar(id, livro);
             return StatusCode(204);
         }
 
-        // post /api/livros/
-        // recebe a info do livro que deseja salvar docorpo da requisição
         [HttpPost]
         public IActionResult Cadastrar(Livro livro)
         {
@@ -55,8 +49,6 @@ namespace Chapter.WebApi.Controllers
             return StatusCode(201);
         }
 
-        // delete /api/livros/{id}
-        // o id passado no delete/api/livros/1
         [HttpDelete("{id}")] 
         public IActionResult Deletar(int id)
         {

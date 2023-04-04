@@ -18,16 +18,8 @@ namespace Chapter.WebApi.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                // Essa string de conexão foi depende da SUA máquina.
                 optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;"
                                 + "Database=Chapter;Trusted_Connection=True;");
-
-                // Exemplo 1 de string de conexão:
-                // User ID=sa;Password=admin;Server=localhost;Database=Chapter;-
-                // + Trusted_Connection=False;
-
-                // Exemplo 2 de string de conexão:
-                //Server=localhost\\SQLEXPRESS;Database=Chapter;Trusted_Connection=True;
             }
         }
         public DbSet<Livro> Livros { get; set; }
